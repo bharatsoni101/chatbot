@@ -31,8 +31,14 @@ This project is a Streamlit-based chatbot application that allows users to uploa
    pip install streamlit PyPDF2 langchain openai faiss-cpu
    ```
 
-4. **Set your Groq API key:**
-   - The API key is set in the code as `GROQ_API_KEY`. Replace it with your own key if needed.
+4. **Configure API and model settings:**
+   - Edit `config.ini` to set your Groq API key, model, and API base URL. Example:
+     ```ini
+     [groq]
+     MODEL = meta-llama/llama-4-scout-17b-16e-instruct
+     GROQ_API_KEY = your_groq_api_key_here
+     GROQ_API_BASE = https://api.groq.com/openai/v1
+     ```
 
 ## Running the Project
 1. **Start the Streamlit app:**
@@ -49,8 +55,8 @@ This project is a Streamlit-based chatbot application that allows users to uploa
 ## Notes
 - Ensure your API key is valid and the model specified in the code is supported by Groq.
 - For large PDFs, embedding and search may take some time.
+- The app caches AI responses for each user query. If you ask the same question again, the cached answer is returned instantly and no new AI call is made.
 - If you encounter errors, check the Streamlit logs and ensure all dependencies are installed.
 
 ## License
 This project is for educational and demonstration purposes.
-
