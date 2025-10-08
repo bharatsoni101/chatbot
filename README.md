@@ -43,7 +43,7 @@ This project is a Streamlit-based chatbot application that allows users to uploa
 ## Running the Project
 1. **Start the Streamlit app:**
    ```cmd
-   streamlit run chatbot.py
+   streamlit run chatbot.py  or  python -m streamlit run chatbot.py
    ```
 
 2. **Usage:**
